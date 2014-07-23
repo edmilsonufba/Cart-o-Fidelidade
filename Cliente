@@ -1,0 +1,34 @@
+package Usuarios;
+
+import java.util.Scanner;
+
+public class Cliente extends Usuario {
+
+	private int cpf;
+
+	
+	public Cliente(Long id, String nome, String senha, String email,
+	                String endereco, String tipo, int matricula) {
+			super(id, nome, senha, email, endereco, tipo);
+			ler = new Scanner(System.in);
+			System.out.printf ("Digite a matricula");
+			this.cpf = ler.nextInt();
+			this.tipo = "Cliente";
+	}
+ 
+	public int getCpf() {
+		return cpf;
+	}
+	
+	public void setCpf(int cpf) {
+		this.cpf = cpf;
+	}
+
+	public void VizualizarCupons() {
+	
+	}
+}
+
+ 
+
+
