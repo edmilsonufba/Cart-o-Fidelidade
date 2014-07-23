@@ -1,0 +1,51 @@
+package Testes;
+import java.util.Scanner;
+
+import Usuarios.Loja;
+//import Usuarios.Usuario;
+import BD.LojaDao;
+
+//import Usuarios.cadastra;
+public class teste {
+
+	private static  Scanner entrada;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+	        int escolha;
+	        entrada = new Scanner(System.in);
+	        
+	        System.out.print("Digite 1 Administrador /n "
+	        		       + "Digite 2 para Cliente /n "
+	        		       + "Digite 3 para Loja /n ");
+	        escolha = entrada.nextLine().charAt(0);
+	        
+	        
+	        switch(escolha )
+	        {
+	            case '1':
+	            	
+	                System.out.println("Você está no case da vogal 'a'");
+	                Loja loja = new Loja(null, null, null, null, null, null, escolha);
+	                              
+	             // grave nessa conexão!!!
+	                LojaDao dao = new LojaDao();
+	             // método elegante
+	                dao.adiciona(loja);
+	                System.out.println("Você está no case da vogal 'a'");
+	                break;
+	           case '2':
+	                System.out.println("Você está no case da vogal 'e'");
+	                break;
+	            case '3':
+	                System.out.println("Você está no case da vogal 'i'");
+	                break;
+	            default:
+	                System.out.println("Você não fez uma escolha Valida");        
+	            
+	        }
+
+}
+}
