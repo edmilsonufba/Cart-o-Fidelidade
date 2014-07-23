@@ -1,0 +1,7 @@
+package Cartao;
+
+public class Cartao  {
+	int pontos ;
+	
+}
+	             
