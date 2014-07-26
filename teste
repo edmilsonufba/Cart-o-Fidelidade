@@ -1,9 +1,14 @@
 package Testes;
+package Testes;
 import java.util.Scanner;
 
+import Usuarios.Admin;
+import Usuarios.Cliente;
 import Usuarios.Loja;
+
 //import Usuarios.Usuario;
-import BD.LojaDao;
+
+import BD.UsuarioDao;
 
 //import Usuarios.cadastra;
 public class teste {
@@ -27,22 +32,31 @@ public class teste {
 	        {
 	            case '1':
 	            	
-	                System.out.println("Cadastramento de Loja");
+	                System.out.println("Você está adcionando uma Loja");
 	                Loja loja = new Loja(null, null, null, null, null, null, escolha);
-	                              
 	             // grave nessa conexão!!!
-	                LojaDao dao = new LojaDao();
+	               UsuarioDao dao = new UsuarioDao();
 	             // método elegante
 	                dao.adiciona(loja);
-	                System.out.println("Você está no case da vogal 'a'");
 	                break;
 	           case '2':
-	                System.out.println("Você está no case da vogal 'e'");
-	                break;
+	        	   System.out.println("Você está adcionando um Administrador");
+	                Admin administrador= new Admin(null, null, null, null, null, null, escolha);
+	             // grave nessa conexão!!!
+	                UsuarioDao dao1 = new UsuarioDao();
+	             // método elegante
+	                dao1.adiciona(administrador);
+	               break;
 	            case '3':
-	                System.out.println("Você está no case da vogal 'i'");
-	                break;
-	            default:
+	            	 System.out.println("Você estáadcionando um cliente");
+		                Cliente cliente = new  Cliente(null, null, null, null, null, null, escolha);
+		             // grave nessa conexão!!!
+		                UsuarioDao dao2 = new UsuarioDao();
+		             // método elegante
+		                dao2.adiciona(cliente);
+		            break;
+	     
+	           default:
 	                System.out.println("Você não fez uma escolha Valida");        
 	            
 	        }
