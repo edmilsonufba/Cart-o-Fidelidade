@@ -27,7 +27,7 @@ public class teste {
 	        {
 	            case '1':
 	            	
-	                System.out.println("Você está no case da vogal 'a'");
+	                System.out.println("Cadastramento de Loja");
 	                Loja loja = new Loja(null, null, null, null, null, null, escolha);
 	                              
 	             // grave nessa conexão!!!
