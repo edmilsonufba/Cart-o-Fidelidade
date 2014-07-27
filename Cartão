@@ -2,9 +2,14 @@ package Cartao;
 
 import java.util.Random;
 
+import Usuarios.Cliente;
+import Usuarios.Loja;
+
 public class Cartao  {
 	public int pontos ;
     protected int Codigo;
+    protected Loja loajaassociada;
+    protected Cliente donocartao;
 	
    public int getCodigo() {
 	return Codigo;
@@ -37,5 +42,7 @@ public class Cartao  {
 	}
 	}
 
+
+	             
 
 	             
