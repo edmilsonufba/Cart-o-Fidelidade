@@ -1,4 +1,8 @@
 package Testes;
+
+
+
+
 import java.util.Scanner;
 
 import Usuarios.Admin;
@@ -10,6 +14,7 @@ import Usuarios.Loja;
 import BD.AdminDao;
 import BD.ClienteDao;
 import BD.LojaDao;
+import Cartao.Cartao;
 //import BD.UsuarioDao;
 
 //import Usuarios.cadastra;
@@ -20,18 +25,18 @@ public class teste {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		
-	        adcionarUsuarios();
-
-}
-
+		Cartao novo_cartao = new Cartao();
+	    //  adcionarUsuarios();
+		 novo_cartao.zerarpontoseresgatar() ;
+		}
+	
 	private static void adcionarUsuarios() {
 		int escolha;
         entrada = new Scanner(System.in);
         
         System.out.print(" Digite 1 para Loja \n "
         		       + "Digite 2 para Administrador \n "
-        		       + "Digite 3 para Cliente \n ");
+        		       + "Digite 3 para Cliente \n ---> ");
         escolha = entrada.nextLine().charAt(0);
         
         
@@ -69,4 +74,6 @@ public class teste {
         }
 		
 	}
+	
+	
 }
