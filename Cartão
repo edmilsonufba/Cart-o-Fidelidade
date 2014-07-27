@@ -1,7 +1,41 @@
 package Cartao;
 
+import java.util.Random;
+
 public class Cartao  {
-	int pontos ;
+	public int pontos ;
+    protected int Codigo;
 	
+   public int getCodigo() {
+	return Codigo;
 }
+
+   public void setCodigo(int codigo) {
+	Codigo = codigo;
+}
+
+   public int getPontos() {
+		return pontos;
+	}
+
+   public  void setPontos(int pontos) {
+		this.pontos = pontos;
+	}
+	
+   public void zerarpontoseresgatar (){
+		//int pontuacao = pontos;
+		Random gerador = new Random();
+		int aleatorio = gerador.nextInt(10000);
+		if ( this.pontos == 10) {
+			this.pontos =0 ;
+			this.Codigo = aleatorio; 
+			System.out.println("resgate efetuado com sucesso o numero do resgate é" + Codigo);
+		}
+		else {
+			System.out.println("Não foi possivel fazer o resgate " );
+		}
+	}
+	}
+
+
 	             
